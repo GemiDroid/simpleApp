@@ -28,4 +28,6 @@
     <string name="max_added">Max number of patient allowed</string>
     <string name="save">Save</string>
     <string name="hello">Hi again, %s</string>
+    <string name="savics_test">Savics Android test</string>
+    <string name="message">I did good, I like it!</string>
 </resources>

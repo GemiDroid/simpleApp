@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.setType("text/plain");
+       sendIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.savics_test));
+       sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.message));
         Intent shareIntent = Intent.createChooser(sendIntent, null);
         startActivity(shareIntent);
 
