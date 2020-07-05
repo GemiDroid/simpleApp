@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_10"
+    tools:context=".presentation.ui.settings.SettingsFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tin_current_patient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/current_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    <EditText
+        android:padding="@dimen/margin_10"
+        android:id="@+id/current_patient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edit_bg"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_20" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tin_min_patients"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:hint="@string/current_added"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tin_current_patient">
+
+    <EditText
+        android:id="@+id/current_added_patients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:padding="@dimen/margin_10"
+        android:text="@string/zero"
+/>
+
+</com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tin_max_patients"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:hint="@string/max_added"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tin_min_patients"
+       >
+
+<EditText
+    android:inputType="numberDecimal"
+    android:padding="@dimen/margin_10"
+        android:id="@+id/max_patients"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edit_bg"
+        />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/save_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/colorAccent"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tin_max_patients"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
